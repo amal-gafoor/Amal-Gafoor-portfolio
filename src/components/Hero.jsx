@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { HeroHighlight, Highlight } from './ui/HeroHighlight';
-import { ArrowRight, Download, Linkedin, Github, Instagram, Mail } from 'lucide-react';
+import { ArrowRight, Linkedin, Github, Instagram, Mail } from 'lucide-react';
 import './Hero.css';
 
 const Hero = () => {
@@ -31,8 +31,8 @@ const Hero = () => {
                                 <a href="#projects" className="btn btn-primary">
                                     View My Work <ArrowRight size={20} />
                                 </a>
-                                <a href="/Amal_Gafoor_resume_2026.pdf" download className="btn btn-outline">
-                                    Download Resume <Download size={20} />
+                                <a href="https://drive.google.com/file/d/1naCsXczxatBneHihaUALhvBk7vxr940T/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+                                    View Resume <ArrowRight size={20} />
                                 </a>
                             </div>
 
