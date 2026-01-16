@@ -1,0 +1,56 @@
+.bg-gradient-container {
+    position: relative;
+    padding: 2px;
+    /* Thinner border for elegance */
+    display: flex;
+    /* Ensure it wraps nicely */
+    flex-direction: column;
+    /* Ensure content stretches */
+    overflow: hidden;
+    border-radius: 16px;
+    /* Default border radius, matches commonly used size */
+}
+
+/* The moving gradient layers */
+.bg-gradient-motion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250%;
+    /* Large enough to cover rotation of rectangular items */
+    aspect-ratio: 1;
+    z-index: 1;
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: opacity 0.5s;
+    background: conic-gradient(from 0deg, #0cebeb, #20e3b2, #ce14fb, #0cebeb);
+    /* Cyan -> Purple -> Cyan loop */
+    /* Transform handled by Framer Motion in JS (translate -50%, -50% + rotate) */
+}
+
+.bg-gradient-container:hover .bg-gradient-motion {
+    opacity: 1;
+}
+
+.bg-gradient-blur {
+    filter: blur(20px);
+}
+
+.bg-gradient-container:hover .bg-gradient-blur {
+    filter: blur(30px);
+    /* More glow on hover */
+    opacity: 0.8;
+}
+
+.bg-gradient-content {
+    position: relative;
+    z-index: 2;
+    background: var(--card-bg, #0f172a);
+    /* Default to Slate 900 if var missing */
+    border-radius: 15px;
+    /* Slightly less than container to fit inside padding */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
