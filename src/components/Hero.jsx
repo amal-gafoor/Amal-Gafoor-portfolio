@@ -17,7 +17,7 @@ const Hero = () => {
                         >
                             <span className="hero-subtitle">Hello, I'm</span>
                             <h1 className="hero-title">
-                                Amal <Highlight className="text-white">Gafoor P K</Highlight>
+                                <Highlight className="text-white">Amal Gafoor P K</Highlight>
                             </h1>
                             <h2 className="hero-role">
                                 Chemical Engineer | AI & Data Science Enthusiast
